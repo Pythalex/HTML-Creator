@@ -10,7 +10,7 @@ Créateur: Alexandre BONIN 2016
 PYTHON
 """
 
-from tkinter import Tk, Toplevel, Button, Label, Frame, PhotoImage
+from tkinter import Tk, Toplevel, Button, Label, Frame, PhotoImage, TclError
 
 
 class Application(object):
@@ -21,7 +21,7 @@ class Application(object):
 
         try:
             self.master.iconbitmap('logo.ico')
-        except _tkinter.TclError:
+        except TclError:
              # Pour les utilisateurs non Windows
              pass
 

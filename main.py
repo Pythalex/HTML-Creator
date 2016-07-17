@@ -10,16 +10,23 @@ Créateur: Alexandre BONIN 2016
 PYTHON
 """
 
-from tkinter import Tk, Toplevel, Button, Label, Frame
+from tkinter import Tk, Toplevel, Button, Label, Frame, PhotoImage
 
 
 class Application(object):
 
     def __init__(self):
         self.master = Tk()
+        self.master.title('HTML Creator')
+
+        try:
+            self.master.iconbitmap('logo.ico')
+        except _tkinter.TclError:
+             # Pour les utilisateurs non Windows
+             pass
 
         self.frame = Frame(borderwidth=1, relief='sunken')
-        self.frame.grid(row=0,column=0)
+        self.frame.grid(row=0, column=0, pady=20, padx=5)
 
         message_base = ("Bonjour, HTML Creator vous permet de créer "
         "des fichiers HTML5 et CSS 3 balisés et fonctionnels en un seul "
@@ -29,13 +36,18 @@ class Application(object):
         self.description = Label(master=self.frame,
                                  text=message_base,
                                  font="Times 9")
-        self.description.grid(row=0, column=0, pady=15)
+        self.description.grid(row=0, column=0)
 
         self.button_html = Button(master=self.master,
                                   text="Créer fichier HTML & CSS",
                                   font="Georgia 8",
                                   command=self.creer_fichiers)
-        self.button_html.grid(row=0, column=1)
+        self.button_html.grid(row=0, column=1, padx=5)
+
+        #VERSION#
+        Label(master = self.master,
+              text = '1.1',
+              font = 'Times 8').place(x=0,y=0)
 
     def creer_fichiers(self):
         self.creer_fichier_html()
@@ -104,4 +116,11 @@ main()
 
 if __name__ == "__main__":
 
-    pass
+    def test():
+        text = ("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        "ccccccccccccccccccccccccccccccccccccccccccccccccccccccc")
+
+        print(resize_text(text = text, max_chars = 10))
+
+    test()

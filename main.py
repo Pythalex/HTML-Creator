@@ -104,11 +104,4 @@ main()
 
 if __name__ == "__main__":
 
-    def test():
-        text = ("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-        "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
-        "ccccccccccccccccccccccccccccccccccccccccccccccccccccccc")
-
-        print(resize_text(text = text, max_chars = 10))
-
-    test()
+    pass

@@ -10,6 +10,7 @@ changelog
 - better tkinter interface
 - no longer tabulation problems for HTML files
 - no console version available
+- added icon and support for non-Windows OS
 
 1.0
 ------

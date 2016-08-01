@@ -60,7 +60,7 @@ class Application(object):
         '<html>\n'
         '    <head>\n'
         '        <meta charset="UTF-8"/>\n'
-        '        <link rel="Styleheets" href="style.css"/>\n'
+        '        <link rel="Styleheet" href="style.css"/>\n'
         '        <title>Titre Page</title>\n'
         '    </head>\n\n'
         '    <body>\n'
